@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/practice-HTTP-API-pocemon/static/css/main.c9969133.css",
+    "main.js": "/practice-HTTP-API-pocemon/static/js/main.9cbef32e.js",
+    "static/media/question.png": "/practice-HTTP-API-pocemon/static/media/question.080103f60349a2a2859c.png",
+    "static/media/cat.jpg": "/practice-HTTP-API-pocemon/static/media/cat.c4b80c4e01c86674e4da.jpg",
+    "index.html": "/practice-HTTP-API-pocemon/index.html",
+    "main.c9969133.css.map": "/practice-HTTP-API-pocemon/static/css/main.c9969133.css.map",
+    "main.9cbef32e.js.map": "/practice-HTTP-API-pocemon/static/js/main.9cbef32e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9969133.css",
+    "static/js/main.9cbef32e.js"
+  ]
+}
