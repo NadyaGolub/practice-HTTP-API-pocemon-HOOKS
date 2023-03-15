@@ -1,23 +1,25 @@
-import { Component } from 'react';
+import { Component, useState } from 'react';
 import { ImSearch } from 'react-icons/im';
 import { toast } from 'react-toastify';
 
 const styles = { form: { marginBottom: 20 } };
 
-class PokemonForm extends Component {
-  state = {
-    pokemonName: '',
-  };
+function PokemonForm({onSubmit}) {
+  const [pokemonName, setPokemonName] = useState('');
 
-  handleNameChange = event => {
-    this.setState({ pokemonName: event.currentTarget.value.toLowerCase() });
+  // state = {
+  //   pokemonName: '',
+  // };
+
+  const handleNameChange = event => {
+    setPokemonName(event.currentTarget.value.toLowerCase());
   };
 
   // toLowerCase() - приводить все до нижнього регістру
 
 
-  handleSubmit = event => {
-    if (this.state.pokemonName.trim() === '') {
+  const handleSubmit = event => {
+    if (pokemonName.trim() === '') {
       toast.error("Введіть імя покемона");
       return;
 
@@ -31,10 +33,10 @@ class PokemonForm extends Component {
 
     event.preventDefault();
 
-    this.props.onSubmit(this.state.pokemonName);
-    this.setState({ pokemonName: '' });
+    onSubmit(pokemonName);
+    setPokemonName( '' );
   };
-  render() {
+  
     return (
       <form onSubmit={this.handleSubmit} style={styles.form}>
         <input
@@ -49,7 +51,7 @@ class PokemonForm extends Component {
         </button>
       </form>
     );
-  }
+  
 }
 
 export default PokemonForm;

@@ -1,23 +1,24 @@
-import { Component } from 'react';
+import {  useState } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PokemonForm from './PokemonForm';
 import PokemonInfo from './PokemonInfo';
 
-class App extends Component {
-  state = {
-    pokemonName: '',
-  };
+function App() {
+  const [pokemonName, setPokemonName] = useState('');
+  // state = {
+  //   pokemonName: '',
+  // };
 
-  handleFormSubmit = pokemonName => {
-    this.setState({ pokemonName });
-  };
+  // const handleFormSubmit = pokemonName => {
+  //   setPokemonName( pokemonName );
+  // };
 
-  render() {
+  
     return (
       <div style={{ maxWith: 1170, margin: '0 auto', padding: 20 }}>
-        <PokemonForm onSubmit={this.handleFormSubmit} />
-        <PokemonInfo pokemonName={ this.state.pokemonName} />
+        <PokemonForm onSubmit={setPokemonName} />
+        <PokemonInfo pokemonName={ pokemonName} />
         <ToastContainer
           position="top-right"
           autoClose={5000}
@@ -32,7 +33,7 @@ class App extends Component {
         />
       </div>
     );
-  }
+  
 }
 
 export default App;
