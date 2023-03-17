@@ -1,4 +1,4 @@
-import { Component, useState } from 'react';
+import { useState } from 'react';
 import { ImSearch } from 'react-icons/im';
 import { toast } from 'react-toastify';
 
@@ -38,12 +38,12 @@ function PokemonForm({onSubmit}) {
   };
   
     return (
-      <form onSubmit={this.handleSubmit} style={styles.form}>
+      <form onSubmit={handleSubmit} style={styles.form}>
         <input
           type="text"
           name="pokemonName"
-          value={this.state.pokemonName}
-          onChange={this.handleNameChange}
+          value={pokemonName}
+          onChange={handleNameChange}
         />
         <button type="submit">
           <ImSearch style={{ marginRight: 8 }} />
